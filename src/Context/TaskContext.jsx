@@ -9,7 +9,7 @@ export function TaskContextProvider(props) {
   function createTask(task) {
     setTasks([
       ...tasks,
-      { title: task.title, id: tasks.length, description: task.description, },
+      { title: task.title, id: task.length, description: task.description, },
     ]);
   }
 

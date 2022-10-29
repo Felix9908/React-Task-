@@ -3,6 +3,7 @@ import { TaskContext } from "./Context/TaskContext";
 
 function TaskCard({ task }) {
   const { deleteTask } = useContext(TaskContext);
+  const { updateTask } = useContext(TaskContext);
   return (
     <div className="bg-gray-800 text-white p-4 rounded-md">
       <h1 className="text-xl font-bold capitalize">{task.title}</h1>
@@ -12,6 +13,12 @@ function TaskCard({ task }) {
         onClick={() => deleteTask(task.id)}
       >
         Eliminar Tarea
+      </button>
+      <button
+        className="bg-blue-500 px-2 py-1 rounded-md mt-4 hover:bg-blue-400"
+        onClick={() => updateTask(task.id)}
+      >
+        Editar Tarea
       </button>
     </div>
   );
